@@ -4,9 +4,25 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
         <title>Practice Poker!</title>
     </head>
     <body>
-        <h1>Poker</h1>
+        <div class="poker">
+            <h1 class="poker__title">Poker</h1>
+            <div class="poker__table">
+                <div class="poker__table__deck"></div>
+                <div id="tabled" class="poker__table__shown"></div>
+            </div>
+            <div class="poker__buttons">
+                <button id="fold" class="poker__buttons__fold">Fold</button>
+                <button id="check" class="poker__buttons__check">Check</button>
+                <button id="redeal" class="poker__buttons__Re-deal">
+                    Re-deal
+                </button>
+            </div>
+            <div id="pokerhand" class="poker__hand"></div>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>

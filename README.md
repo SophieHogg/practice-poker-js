@@ -18,6 +18,8 @@ Many poker games online use the same green and red palette, so I decided to go a
 #F27059
 #F25C54
 
+In order to allow for this, I made the design for the card back on onlinefractaltools.com to imitate the complex designs that commonly appear on the backs of cards.
+
 In addition, I opted for some darker colours to counter the more piercing effect of these colours, especially darker reddish-browns and purples.
 
 ## Extensions:
