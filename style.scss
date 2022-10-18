@@ -1,5 +1,15 @@
 @use "./partials/palette";
 @import url("https://fonts.googleapis.com/css2?family=Cardo&family=Noto+Sans+Warang+Citi&family=Rajdhani&display=swap");
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 body {
     background-color: palette.$background-colour;
 }
@@ -86,8 +96,7 @@ body {
             box-shadow: none;
             &__show {
                 visibility: visible;
-                // -webkit-animation: fadeIn 1s;
-                // animation: fadeIn 1s;
+                animation: fadeIn 0.2s;
             }
         }
 
@@ -100,6 +109,7 @@ body {
             height: 2.6vw;
             &__show {
                 visibility: visible;
+                animation: fadeIn 0.2s;
             }
             &:hover {
                 cursor: pointer;

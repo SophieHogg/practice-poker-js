@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Cardo&family=Noto+Sans+Warang+Citi&family=Rajdhani&display=swap");
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   background-color: #4d0400;
 }
@@ -88,6 +96,7 @@ body {
 }
 .poker__buttons__text__show {
   visibility: visible;
+  animation: fadeIn 0.2s;
 }
 .poker__buttons__submit {
   visibility: hidden;
@@ -99,6 +108,7 @@ body {
 }
 .poker__buttons__submit__show {
   visibility: visible;
+  animation: fadeIn 0.2s;
 }
 .poker__buttons__submit:hover {
   cursor: pointer;

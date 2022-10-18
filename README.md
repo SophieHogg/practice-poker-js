@@ -28,6 +28,7 @@ In addition, I opted for some darker colours to counter the more piercing effect
 -   Refactored code to reduce repetition
 -   Fixed visuals
 -   Added favicon
+-   Added betting textbox fadein keyframe animation
 
 ### To Do
 
