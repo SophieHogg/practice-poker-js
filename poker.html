@@ -5,20 +5,68 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="./images/poker-chip.png" />
         <title>Practice Poker!</title>
     </head>
     <body>
         <div class="poker">
             <h1 class="poker__title">Poker</h1>
+            <div class="poker__header">
+                <div class="poker__header__pot">
+                    <p>Pot: <span id="pot">0</span></p>
+                </div>
+                <div class="poker__header__money">
+                    <p>Player Money: <span id="money">100</span></p>
+                </div>
+            </div>
             <div class="poker__table">
                 <div class="poker__table__deck"></div>
                 <div id="tabled" class="poker__table__shown"></div>
             </div>
             <div class="poker__buttons">
-                <button id="fold" class="poker__buttons__fold">Fold</button>
-                <button id="check" class="poker__buttons__check">Check</button>
-                <button id="redeal" class="poker__buttons__Re-deal">
+                <div class="poker__buttons__bidding">
+                    <button
+                        id="bid"
+                        class="poker__buttons__button poker__buttons__button--bid"
+                        onclick="showBox()"
+                    >
+                        Bid
+                    </button>
+                    <div class="poker__buttons__bidding__money">
+                        <input
+                            id="popup"
+                            class="poker__buttons__text"
+                            type="number"
+                        />
+                        <button id="submit" class="poker__buttons__submit">
+                            ✓
+                        </button>
+                    </div>
+                </div>
+                <button
+                    id="check"
+                    class="poker__buttons__button poker__buttons__button--check"
+                >
+                    Check
+                </button>
+                <button
+                    id="fold"
+                    class="poker__buttons__button poker__buttons__button--fold"
+                >
+                    Fold
+                </button>
+
+                <button
+                    id="redeal"
+                    class="poker__buttons__button poker__buttons__button--redeal"
+                >
                     Re-deal
+                </button>
+                <button
+                    id="restart"
+                    class="poker__buttons__button poker__buttons__button--restart"
+                >
+                    Restart
                 </button>
             </div>
             <div id="pokerhand" class="poker__hand"></div>

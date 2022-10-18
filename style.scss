@@ -1,5 +1,5 @@
 @use "./partials/palette";
-@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Noto+Sans+Warang+Citi&family=Rajdhani&display=swap");
 body {
     background-color: palette.$background-colour;
 }
@@ -9,30 +9,48 @@ body {
     flex-direction: column;
     align-items: center;
     &__title {
-        color: palette.$button-colour;
+        color: palette.$check-colour;
         text-align: center;
         font-family: "Rajdhani", sans-serif;
         font-size: 50px;
     }
+    &__header {
+        width: 50vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        color: white;
+        font-family: "Noto Sans Warang Citi", sans-serif;
+    }
     &__hand {
-        width: 30vw;
+        width: 24vw;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
     &__card {
         background-color: white;
-        height: 15vw;
-        width: 10vw;
+        height: 12vw;
+        width: 8vw;
         border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin-left: 10px;
+        padding: 10px;
+        font-size: 3vw;
+        font-family: "Cardo", serif;
+        &__cardSuit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 6vw;
+        }
+        &__suitImg {
+            width: 4vw;
+        }
     }
     &__table {
-        margin-top: 10vh;
-        margin-bottom: 10vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
         width: 80vw;
         display: flex;
         flex-direction: row;
@@ -40,19 +58,116 @@ body {
         align-items: center;
         &__deck {
             background-image: url("./images/card-back.png");
-            background-size: 10vw 15vw;
-            width: 10vw;
-            height: 15vw;
+            background-size: 8vw 12vw;
+            width: 8vw;
+            height: 12vw;
             border: 0.3vw solid white;
             border-radius: 10px;
         }
         &__shown {
             width: 60vw;
-            height: 15vw;
+            height: 14vw;
             background-color: palette.$player-colour;
             border-radius: 10px;
             display: flex;
             flex-direction: row;
+            align-items: center;
         }
     }
+    &__buttons {
+        margin-bottom: 20px;
+        display: flex;
+        &__text {
+            visibility: hidden;
+            background-color: #ffffff;
+            color: #000;
+            border: 0;
+            font-size: 20px;
+            box-shadow: none;
+            &__show {
+                visibility: visible;
+                // -webkit-animation: fadeIn 1s;
+                // animation: fadeIn 1s;
+            }
+        }
+
+        &__submit {
+            visibility: hidden;
+            background-color: palette.$submit-colour;
+            color: white;
+            border: 0;
+            width: 2.6vw;
+            height: 2.6vw;
+            &__show {
+                visibility: visible;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &__bidding {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__money {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        &__button {
+            width: 10vw;
+            height: 3vw;
+            margin: 10px;
+            border: 0;
+            border-radius: 5px;
+            &:hover {
+                cursor: pointer;
+            }
+            &--check {
+                background-color: palette.$check-colour;
+                &:hover {
+                    background-color: palette.$check-colour-hover;
+                }
+                &:active {
+                    background-color: palette.$check-colour-click;
+                    color: white;
+                }
+            }
+            &--fold {
+                background-color: palette.$fold-colour;
+                &:hover {
+                    background-color: palette.$fold-colour-hover;
+                }
+                &:active {
+                    background-color: palette.$fold-colour-click;
+                    color: white;
+                }
+            }
+            &--redeal {
+                background-color: palette.$redeal-colour;
+                &:hover {
+                    background-color: palette.$redeal-colour-hover;
+                }
+                &:active {
+                    background-color: palette.$redeal-colour-click;
+                    color: white;
+                }
+            }
+            &--bid {
+                background-color: palette.$bid-colour;
+                &:hover {
+                    background-color: palette.$bid-colour-hover;
+                }
+                &:active {
+                    background-color: palette.$bid-colour-click;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+input[type="number"] {
+    width: 7vw;
 }
